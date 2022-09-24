@@ -1,0 +1,32 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: false
+    show-sql: true
+    defer-datasource-initialization: true
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:hyeongjin;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
+  redis:
+    host: localhost
+    port: 6379
+
+  jwt:
+    secret: aHllb25namluLWRpdmlkZW5lZC1wcm9qZWN0LWp3dC1zZWNyZXQta2V5Cg==
+    
+
+scheduler:
+  scrap:
+    yahoo: "0 0 0 * * *"
